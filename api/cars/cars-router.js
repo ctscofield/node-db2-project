@@ -3,7 +3,12 @@ const express = require("express")
 
 const router = express.Router()
 
-const {} = require("./cars-middleware")
+const {
+  checkCarId,
+  checkCarPayload,
+  checkVinNumberValid,
+  checkVinNumberUnique
+} = require("./cars-middleware")
 
 const Cars = require("./cars-model")
 
