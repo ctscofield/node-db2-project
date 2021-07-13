@@ -9,10 +9,10 @@ exports.up = function (knex) {
         .notNullable()
       table.text('model')
         .notNullable()
-      table.number('mileage')
+      table.integer('mileage')
         .notNullable()
       table.text('title')
-      table.table('transmission')
+      table.text('transmission')
     })
 };
 
