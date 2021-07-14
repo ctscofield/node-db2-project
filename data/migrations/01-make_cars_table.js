@@ -1,18 +1,18 @@
-exports.up = function (knex) {
+exports.up = function(knex) {
   return knex.schema
     .createTable('cars', table => {
       table.increments('id')
-      table.text('vin', 17)
+      table.string('vin', 17)
         .unique()
         .notNullable()
-      table.text('make')
+      table.string('make')
         .notNullable()
-      table.text('model')
+      table.string('model')
         .notNullable()
       table.integer('mileage')
         .notNullable()
-      table.text('title')
-      table.text('transmission')
+      table.string('title')
+      table.string('transmission')
     })
 };
 
